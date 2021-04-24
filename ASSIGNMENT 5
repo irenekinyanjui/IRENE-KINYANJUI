@@ -1,0 +1,78 @@
+
+def print_menu():       ## Your menu design here
+    print( 30 * "-" , "MENU" , 30 * "-")
+    print("[P] Print Options")
+    print("[C] convert from celsius")
+    print("[F] Covert from Fahrenheit")
+    print("[M] Convert from Miles")
+    print("[KM] Convert from Kilometers")
+    print("[In] Convert from Inches")
+    print("[CM] Convert from centimeters")
+    print("[Q] Exit")
+    print (67 * "-")
+print_menu()
+
+
+
+loop = True
+
+while loop:  ## While loop which will keep going until loop = False
+    print_menu()  ## Displays menu
+    choice = input("Enter your choice [P,C,F,M,KM,In,CM,Q]: ")
+
+    if choice == 'P':
+        print("Menu P has been selected")
+        ## You can add your code or functions here
+    elif choice == 'C':
+        print("Menu C has been selected")
+        ## You can add your code or functions here
+        c = float(input("Enter temperature in celsius :"))
+        f = (c * 1.8000) + 32
+        print("Celsius temperature :", c)
+        print("Fahrenheit:", f)
+        print()
+
+    elif choice == 'F':
+        print("Menu F has been selected")
+        ## You can add your code or functions here
+        f = float(input("Enter temperature in Fahrenheit :"))
+        c = (f - 32) / 1.800
+        print("Fahrenheit temperature :", c)
+        print("Celsius:", f)
+        print()
+
+    elif choice == 'M':
+        print("Menu M has been selected")
+        m = float(input("Enter distance in Miles :"))
+        km = (m / 0.62137)
+        print("Miles distance :", m)
+        print("Kilometer:", km)
+        print()
+    elif choice == 'KM':
+        km = float(input("Enter distance in kilometers :"))
+        m = km * 0.62137
+        print("Kilometers distance :", km)
+        print("Miles:", m)
+        print()
+
+    elif choice == 'In':
+        inc = float(input("Enter length in Inches :"))
+        cm = (inc / 0.39370)
+        print("Inches length :", inc)
+        print("Centimeter:", cm)
+        print()
+
+    elif choice == 'CM':
+        cm = float(input("Enter length in centimeters :"))
+        inc = cm * 0.39370
+        print("Centimeter length :", cm)
+        print("Inches:", inc)
+        print()
+    elif choice == 'Q':
+        print("Menu Q has been selected")
+        ## You can add your code or functions here
+        loop = False  # This will make the while loop to end as not value of loop is set to False
+    else:
+        print("Invalid option")
+        # Any LETTER inputs other than P,C,F,M,KM,In,CM,Q  print an error message
+        choice = input("Wrong option selection. Enter any key to try again..")
